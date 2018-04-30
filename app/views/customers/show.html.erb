@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @customer.address %>
+</p>
+
+<p>
+  <strong>Problem:</strong>
+  <%= @customer.problem %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @customer.state.name %>
+</p>
+
+<p>
+  <strong>Lawyer:</strong>
+    <% if @customer.lawyer != nil %>
+        <td><%= @customer.lawyer.name %></td>
+      <% else %>
+        <td> Sem advogado </td>
+    <% end %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

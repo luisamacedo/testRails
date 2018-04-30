@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyText
+  problem: MyText
+  state: one
+  lawyer: one
+
+two:
+  name: MyString
+  address: MyText
+  problem: MyText
+  state: two
+  lawyer: two
