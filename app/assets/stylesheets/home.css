@@ -271,11 +271,19 @@ body {
     box-shadow: none !important;
   }
 
-  .tablecustom tbody td {
-	font-family: 'Montserrat';
+  .table-custom tbody td {
+	  font-family: 'Montserrat';
     font-size: 30px;
-    color: #2C3E50;    
-}
+    color: #2C3E50;
+  }
+  .table-custom-white tbody td {
+    font-family: 'Montserrat';
+    font-size: 30px;
+    color: #e9ecef;    
+  }
+
+
+table-custom-lawyer
   
   .floating-label-form-group label {
     font-size: 0.85em;
@@ -362,12 +370,108 @@ body {
   }
   
   .btn-secondary {
-    background-color: #2C3E50;
-    border-color: #2C3E50;
+    background-color: #fff;
+    border-color: #fff;
+    color: #18BC9C !important;    
   }
   
   .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
     background-color: #1a252f;
     border-color: #1a252f;
   }
-  
+
+  .cs-skin-border {
+	border: 2px solid #1a252f;
+  border-color: inherit;
+  font-family: 'Montserrat';
+  font-size: 30px;
+  color: #1a252f;
+	-webkit-transition: background 0.2s, border-color 0.2s;
+  transition: background 0.2s, border-color 0.2s;
+  vertical-align: middle;
+  align-content: center
+}
+
+
+
+
+
+  @font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot?-rdnm34');
+	src:url('../fonts/icomoon/icomoon.eot?#iefix-rdnm34') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.woff?-rdnm34') format('woff'),
+		url('../fonts/icomoon/icomoon.ttf?-rdnm34') format('truetype'),
+		url('../fonts/icomoon/icomoon.svg?-rdnm34#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+div.cs-skin-border {
+	background: transparent;
+	font-size: 2em;
+	font-weight: 700;
+	max-width: 600px;
+}
+
+@media screen and (max-width: 30em) {
+	div.cs-skin-border { font-size: 1em; }
+}
+
+.cs-skin-border > span {
+	border: 5px solid #000;
+	border-color: inherit;
+	-webkit-transition: background 0.2s, border-color 0.2s;
+	transition: background 0.2s, border-color 0.2s;
+}
+
+.cs-skin-border > span::after,
+.cs-skin-border .cs-selected span::after {
+	font-family: 'icomoon';
+	content: '\e000';
+}
+
+.cs-skin-border ul span::after {
+	content: '';
+	opacity: 0;
+}
+
+.cs-skin-border .cs-selected span::after {
+	content: '\e00e';
+	color: #ddd9c9;
+	font-size: 1.5em;
+	opacity: 1;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+.cs-skin-border.cs-active > span {
+	background: #fff;
+	border-color: #fff;
+	color: #2980b9;
+}
+
+.cs-skin-border .cs-options {
+	color: #2980b9;
+	font-size: 0.75em;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s, visibility 0s 0.2s;
+	transition: opacity 0.2s, visibility 0s 0.2s;
+}
+
+.cs-skin-border.cs-active .cs-options {
+	opacity: 1;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+.cs-skin-border ul span {
+	padding: 1em 2em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.cs-skin-border .cs-options li span:hover,
+.cs-skin-border li.cs-focus span {
+	background: #f5f3ec;
+}

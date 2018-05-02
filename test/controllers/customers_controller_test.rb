@@ -19,7 +19,6 @@ class CustomersControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Customer.count') do
       post customers_url, params: { customer: { address: @customer.address, lawyer_id: @customer.lawyer_id, name: @customer.name, problem: @customer.problem, state_id: @customer.state_id } }
     end
-
     assert_redirected_to customer_url(Customer.last)
   end
 
